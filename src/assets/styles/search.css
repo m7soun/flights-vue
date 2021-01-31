@@ -1,0 +1,314 @@
+/* Search Form */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+#search-form {
+    border: 1px solid red;
+    width: 700px;
+    position: relative;
+}
+
+#header {
+    height: 80px;
+    background: red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#header h1 {
+    color: #FFF;
+    margin-left: 20px;
+    font-size: 1.3em
+}
+
+.flight {
+    padding: 20px;
+}
+.flight input, select {
+    color: #6B6A6A;
+}
+
+.info-box {
+    padding: 10px 0;
+    margin-top: 20px;
+    flex: 1;
+    border-right: 20px solid transparent;
+}
+.info-box:last-child {
+    border-right: none;
+}
+.info-box label {
+    display: block;
+    color: #6B6A6A;
+    font-size: .9em;
+}
+.info-box input[type=text], input[type=submit], select {
+    border: none;
+    outline: none;
+    background: #E2E0E0;
+    margin-top: 5px;
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+#flight-type {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px dotted silver;
+}
+#flight-type .info-box {
+    flex: 0 1 25%;
+    display:flex;
+    align-items: center;
+}
+
+#flight-depart {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted silver;
+}
+#flight-depart .info-box {
+    position: relative;
+}
+#depart-res, #arrive-res {
+    position: absolute;
+    background: #FFFFFF;
+}
+#depart-res p, #arrive-res p {
+    padding: 7px 2px;
+    border-bottom: 1px dotted silver;
+}
+#depart-res p:hover, #arrive-res p:hover {
+    background: #EDEDED;
+    cursor: pointer;
+}
+
+#flight-dates {
+    display: flex;
+    border-bottom: 1px dotted silver;
+}
+
+#flight-info {
+    display: flex;
+    border-bottom: 1px dotted silver;
+}
+
+#flight-search .info-box {
+    display: flex;
+    justify-content: center;
+}
+#flight-search input[type=submit] {
+    background: #40556c;
+    color: white;
+    padding: 0;
+    height: 50px;
+    font-size: 1.2em;
+}
+
+table {
+    border: 1px solid #DBDBDB;
+    background: #F4F4F4;
+}
+table td {
+    border: 1px solid #DBDBDB;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.normal {
+    color: rgba(0,0,0,.8)
+}
+.today {
+    background: #FF3240;
+    color: #FFFFFF;
+}
+.closed {
+    color: #DBDBDB;
+    cursor: default;
+}
+.picked {
+    background: green;
+}
+#month {
+    display: inline-block;
+}
+
+#confirm {
+    width: 500px;
+    padding: 20px;
+    border: 5px solid #55AF3A;
+    margin: 20px auto;
+    opacity: 0;
+}
+#confirm h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+#confirm p {
+    padding: 10px;
+}
+#confirm strong {
+    font-weight: 600;
+}
+
+
+
+body {
+    font-family: helvetica, arial;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #c5d8e6;
+    font-weight: 200;
+    font-size: 2.1em;
+    margin: 0px;
+}
+
+h2 {
+    color: #c5d8e6;
+    opacity: 0.5;
+    font-weight: 100;
+    font-size: 0.9em;
+    margin: 0px;
+}
+
+h3 {
+    color: #c5d8e6;
+    opacity: 0.8;
+    font-weight: 100;
+    font-size: 0.9em;
+    margin: 0px;
+}
+
+.cards_wrapper {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card {
+    width: 345px;
+    border-radius: 20px;
+    background: #344451;
+    display: inline-block;
+    margin: 10px;
+}
+.card_heading {
+    padding-top: 25px;
+}
+.card_heading h2 {
+    text-align: center;
+}
+
+.card_trip {
+    text-align: center;
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+}
+.card_trip div {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.card_trip div h1 {
+    margin: 0px;
+}
+.card_trip div h2 {
+    margin: 0px;
+    letter-spacing: 2px;
+}
+.card_trip div.trip_from {
+    text-align: left;
+    width: 35%;
+}
+.card_trip div.trip_from h2 {
+    padding-left: 2px;
+}
+.card_trip div.trip_icon {
+    width: 30%;
+}
+.card_trip div.trip_icon img {
+    padding-top: 20px;
+    opacity: 1;
+    width: 25px;
+}
+.card_trip div.trip_to {
+    text-align: right;
+    width: 35%;
+}
+.card_trip div.trip_to h2 {
+    padding-right: 3px;
+}
+.card_divider {
+    position: relative;
+    width: 100%;
+}
+.card_divider .divider_left {
+    left: -15px;
+}
+.card_divider .divider_hole {
+    position: absolute;
+    top: -12px;
+    padding: 0px;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    background: #c5d8e6;
+}
+.card_divider .divider {
+    width: 85%;
+    margin: auto;
+    height: 2px;
+    background: linear-gradient(to right, #c5d8e6 50%, transparent 50%);
+    background-size: 10px 8px, 100% 2px;
+    opacity: 0.2;
+}
+.card_divider .divider_right {
+    right: -15px;
+}
+.card_seating {
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+}
+.card_seating div {
+    display: inline-block;
+    width: 50%;
+}
+.card_seating div.seating_passenger {
+    text-align: left;
+}
+.card_seating div.seating_seat {
+    text-align: right;
+}
+.card_details {
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+    padding-bottom: 30px;
+}
+.card_details div {
+    display: inline-block;
+    width: 33%;
+}
+.card_details div.details_flight {
+    text-align: left;
+}
+.card_details div.details_date {
+    text-align: center;
+}
+.card_details div.details_time {
+    text-align: right;
+}
