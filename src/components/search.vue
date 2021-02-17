@@ -29,7 +29,7 @@ import axios from "axios"
 import { bus } from '../main'
 
 export default {
-  name: "home",
+  name: "search",
   data: () => ({
     flightNumber: null,
     flightIata: null,
@@ -43,7 +43,8 @@ export default {
         this.$alert("One of the fields must be filled", 'Oops!', 'error');
       } else {
         this.loading = true
-        axios.get('http://127.0.0.1:8000/api/v1/flights', {
+        // axios.get('http://127.0.0.1:8000/api/v1/flights', {
+        axios.get('http://flights.dtech/api/v1/flights', {
           params: {
             flight_number: this.flightNumber,
             flight_iata: this.flightIata,
@@ -52,6 +53,9 @@ export default {
         }).then(response => {
           this.error = null
           this.data = response.data
+          if (response.data.flights.length == 0){
+            this.$alert("No Data Found", 'Oops!', 'warning');
+          }
           bus.$emit('data',this.data)
 
         }).catch(err => {
